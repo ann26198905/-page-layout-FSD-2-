@@ -376,6 +376,129 @@ nav ul li:hover > ul {
   /* IE9 Compat Modes */
   src: local(""), url("/fonts/iconfont/MaterialIcons-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/iconfont/MaterialIcons-Regular.woff2") format("woff2"), url("/fonts/iconfont/MaterialIcons-Regular.woff") format("woff"), url("/fonts/iconfont/MaterialIcons-Regular.ttf") format("truetype");
 }
+.blockFooter {
+  width: 1440px;
+  height: 372px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+.blockFooter__container {
+  width: 1160px;
+  margin: 0 auto;
+}
+.blockFooter__blockFlex {
+  display: flex;
+  justify-content: space-between;
+}
+.blockFooter__logo {
+  padding: 100px 0 0 0;
+  position: absolute;
+}
+.blockFooter__text {
+  padding: 157px 0 0 0;
+  width: 260px;
+}
+
+.text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.footer-column {
+  display: flex;
+  justify-content: space-between;
+  width: 513px;
+}
+.footer-column__row {
+  min-width: 82px;
+  position: relative;
+  left: -24px;
+}
+.footer-column__title {
+  padding: 104px 0 15px 0;
+}
+.footer-column__link {
+  padding: 0 0 8px 0;
+}
+.footer-column__link a {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(31, 32, 65, 0.5);
+  text-decoration: none;
+}
+
+.title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.subscribing {
+  display: flex;
+  flex-direction: column;
+}
+.subscribing__title {
+  padding: 104px 0 20px 0;
+}
+.subscribing__text {
+  width: 208px;
+}
+.subscribing__form {
+  display: block;
+  position: relative;
+  margin: 21px 0 0 0;
+  width: 260px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.subscribing__email-form {
+  display: flex;
+}
+.subscribing__inputtext {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.25);
+  padding: 10px 0 0 15px;
+  border: none;
+}
+.subscribing__button {
+  padding: 0px;
+  right: 32px;
+  top: 14px;
+}
+.subscribing__arrow {
+  font-family: Material Icons;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(180deg, #bc9cff, #8ba4f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #bc9cff;
+}
+
 body {
   background-color: #e5e5e5;
+  color: #000000;
 }

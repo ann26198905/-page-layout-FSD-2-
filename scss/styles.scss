@@ -1,8 +1,10 @@
-@import "nullstyles.scss";
-@import "styles.header.scss";
-@import "styles.header2.scss";
-@import "fonts.scss";
+@import "_nullstyles";
+@import "_styles.header";
+@import "_styles.header2";
+@import "_fonts";
+@import "_styles.footer";
 
 body {
 	background-color: #e5e5e5;
+	color: #000000;
 }
