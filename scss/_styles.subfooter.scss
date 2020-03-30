@@ -1,4 +1,4 @@
-.blockSubfooter {
+.block-subfooter {
   width: 1440px;
   height: 70px;
   background-color: #fff;
@@ -10,7 +10,7 @@
     margin: 0 auto;
   }
 
-  &__blockFlex {
+  &__block-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,6 +33,7 @@
     align-items: center;
     li a i {
       background: linear-gradient(180deg, #bc9cff, #8ba4f9);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }

@@ -1,4 +1,4 @@
-.blockFooter2 {
+.block-footer2 {
   width: 1440px;
   height: 367px;
   background: #ffffff;
@@ -36,6 +36,7 @@
 
     li a i {
       background: linear-gradient(180deg, #bc9cff, #8ba4f9);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
