@@ -1,0 +1,20 @@
+.searching-room-form
+   .searching-room-form__container
+      form.searching-room-form__form(method="post")
+         p.searching-room-form__title Найдём номера под ваши пожелания
+         .searching-room-form__flex
+            .searching-room-form__arrival
+               label.searching-room-form__label(for="startdate") Прибытие
+               input#startdate(type="date" placeholder="ДД.ММ.ГГГГ" name="startdate" min="01.04.2020" max="31.12.2020")
+               i.material-icons.searching-room-form__expand expand_more
+            .searching-room-form__departure
+               label.searching-room-form__label(for="enddate") Выезд
+               input#enddate(type="date" placeholder="ДД.ММ.ГГГГ" name="enddate" min="01.04.2020" max="31.12.2020")
+               i.material-icons.searching-room-form__expand expand_more
+         .searching-room-form__guests
+            label.searching-room-form__label.searching-room-form__label-guests(for="guests") Гости
+            input#guests(type="number" placeholder="Сколько гостей" name="guests" min="1" max="30") 
+            i.material-icons.searching-room-form__expand.searching-room-form__expand-guests expand_more
+         .searching-room-form__button Подобрать номер
+            i.material-icons.searching-room-form__allow arrow_forward
+
