@@ -1,7 +1,7 @@
-@import "_normalize";
+@import "../normalize-reset/normalize";
 // @import "_nullstylemeyer";
-@import "_fonts";
-@import "styles.searching-room-form";
+@import "../fonts/fonts";
+@import "../searching-room-form/styles.searching-room-form";
 
 // [type="number"]::-webkit-inner-spin-button,
 // [type="number"]::-webkit-outer-spin-button {
