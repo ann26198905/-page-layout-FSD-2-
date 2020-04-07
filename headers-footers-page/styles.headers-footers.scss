@@ -1,0 +1,27 @@
+@import "../src/normalize-reset/nullstylemeyer.scss";
+@import "../src/normalize-reset/normalize";
+@import "../src/fonts/fonts";
+@import "../src/mixins";
+@import "../src/header/styles.header";
+@import "../src/header2/styles.header2";
+@import "../src/footer/styles.footer";
+@import "../src/subfooter/styles.subfooter";
+@import "../src/footer2/styles.footer2";
+
+
+body {
+  background-color: #e5e5e5;
+  color: #000000;
+}
+.wrapper {
+  width: 1440px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  &__Logo-simbol {
+    margin-bottom: 68px;
+    padding: 30px 0 0 30px;
+  }
+  &__interlayer {
+    height: 40px;
+  }
+}

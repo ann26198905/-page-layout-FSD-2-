@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+html(lang="en")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport" content="width=device-width,       initial-scale=1.0")
+      link(rel="stylesheet" href="./styles.colors-type.css")
+      
+      title Colors-type
+   body
+      mixin Block-color(count, description, name)
+         .block-color-type-page__block-color
+            div(class = "block-color-type-page__all-color card"+count)
+            .block-color-type-page__block-texts
+               p.block-color-type-page__color-description= description
+               p.block-color-type-page__color-name= name
+      mixin Block-text(count, name, description)
+         div(class = "block-color-type-page__block-text block-text"+count)
+            p(class = "block-color-type-page__text-name text-name"+count)= name
+            p(class = "block-color-type-page__text-description text-description"+count)= description
+      .wrapper-light
+         .wrapper-light__Logo-simbol 
+            img(src="../src/img/Logosimbol.png", alt="Logotype")
+         .block-color-type-page
+            .block-color-type-page__container
+               .block-color-type-page__block-flex
+                  .block-color-type-page__colors
+                     +Block-color("1", "Dark Shade 100%",  "#1F2041")
+                     +Block-color("2", "Dark Shade 75%", "#1F2041")
+                     +Block-color("3", "Dark Shade 50%", "#1F2041")
+                     +Block-color("4", "Dark Shade 25%", "#1F2041")
+                     +Block-color("5", "Dark Shade 5%", "#1F2041")
+                     +Block-color("6", "Purple", "#BC9CFF")
+                     +Block-color("7", "Green", "#6FCF97")
+                  .block-color-type-page__texts
+                     +Block-text("1", "H1", "This one is the sub-section or widget title")
+                     +Block-text("2", "H2", "Next one is the item title inside widgets")
+                     +Block-text("3", "H3", "This is a label or CTA text")
+                     +Block-text("4", "Body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.")
+
+
+

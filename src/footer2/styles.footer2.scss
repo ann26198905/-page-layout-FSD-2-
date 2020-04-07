@@ -1,0 +1,44 @@
+@import "../src/mixins.scss";
+.block-footer2 {
+  width: 1440px;
+  height: 367px;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  margin: 0 auto;
+  text-align: center;
+
+  &__container {
+    width: 560px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    padding-top: 100px;
+  }
+
+  &__text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+    padding-top: 10px;
+  }
+  &__social-icons {
+    padding-top: 28px;
+    position: relative;
+    left: 223px;
+  }
+  @include social-links-icons ();
+  &__twitter:after {
+    content: '\f099';
+    }
+  &__facebook:after {
+    content: '\f082';
+    }
+  &__instagram:after {
+    content: '\f16d';
+    }
+
+}

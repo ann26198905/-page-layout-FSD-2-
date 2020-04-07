@@ -1,0 +1,16 @@
+@import "../src/mixins.scss";
+.block-subfooter {
+&__icons {
+  align-items: center;
+  @include social-links-icons;
+    }
+&__twitter:after {
+  content: '\f099';
+  }
+&__facebook:after {
+  content: '\f082';
+  }
+&__instagram:after {
+  content: '\f16d';
+  }  
+}

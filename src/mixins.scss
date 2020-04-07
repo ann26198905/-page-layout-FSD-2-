@@ -1,0 +1,15 @@
+@mixin social-links-icons {
+    width: 112px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Font Awesome 5 Brands";
+    background: linear-gradient(180deg, #bc9cff, #8ba4f9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #bc9cff;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 23px;
+  }

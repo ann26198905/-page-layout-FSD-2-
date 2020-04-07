@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="en")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport" content="width=device-width,       initial-scale=1.0")
+      link(rel="stylesheet" href="./styles.headers-footers.css")
+      link(rel="stylesheet" href="../src/fonts/iconfont/material-icons.css")
+      link(rel="stylesheet" href="../src/fonts/awesomefont/awesome/all.min.css")
+      title Headers-footers
+   body
+      .wrapper
+         .wrapper__Logo-simbol 
+            img(src="../src/img/Logosimbol.png", alt="Logotype")
+         include ../src/header/header.pug
+         .wrapper__interlayer
+         include ../src/header2/header2.pug
+         .wrapper__interlayer
+         include ../src/footer/footer.pug
+         include ../src/subfooter/subfooter.pug
+         .wrapper__interlayer
+         include ../src/footer2/footer2.pug
