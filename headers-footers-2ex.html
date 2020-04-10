@@ -4,42 +4,57 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="./styles.headers-footers-2ex.css"/>
-    <link rel="stylesheet" href="../src/fonts/iconfont/material-icons.css"/>
-    <link rel="stylesheet" href="../src/fonts/awesomefont/awesome/all.min.css"/>
+    <link rel="stylesheet" href="./src/fonts/iconfont/material-icons.css"/>
+    <link rel="stylesheet" href="./src/fonts/awesomefont/awesome/all.min.css"/>
     <title>Headers-footers</title>
   </head>
   <body>
-    <div class="wrapper"><img class="logotype" src="../src/img/Logosimbol.png" alt="Logotype"/>
+    <div class="wrapper"><img class="logo logo__position" src="../src/img/Logosimbol.png" alt="Logo"/>
       <header class="header header__position">
         <div class="wrapper__container">
-          <div class="wrap-flex-sb"><img class="logo" src="../src/img/Logo.png" alt="logo"/>
-            <nav class="header__menu"> 
-              <ul class="menu-list">
-                <li class="menu-list__li menu-list__li--active"><a class="link" href="#">Home</a></li>
-                <li class="menu-list__li"><a class="link" href="#">About us</a></li>
-                <li class="menu-list__li"><a class="link" href="#">Services</a></li>
-                <li class="menu-list__li"><a class="link" href="#">Careers</a></li>
-                <li class="menu-list__li"><a class="link" href="#">News</a></li>
-                <li class="menu-list__li"><a class="link" href="#">Documentation</a></li>
-              </ul>
-              <button class="button button--color--white">Login</button>
-              <button class="button button--color--gradulated">Register</button>
-            </nav>
+          <div class="wrap-flex-sb"><img class="logotype logotype__position" src="../src/img/Logo.png" alt="logotype"/>
+            <div class="wrap-flex-row">
+              <nav class="header__menu"> 
+                <ul class="menu-list">
+                  <li class="menu-list__li"><a class="link link--active" href="#">Home</a></li>
+                  <li class="menu-list__li"><a class="link" href="#">About us</a></li>
+                  <li class="menu-list__li topmenu"><a class="link expand-more" href="#">Services</a>
+                    <ul class="menu-list submenu">	
+                      <li class="menu-list__li services"> <a class="link" href="#">Services1</a></li>
+                      <li class="menu-list__li services"> <a class="link" href="#">Services2</a></li>
+                      <li class="menu-list__li services"> <a class="link" href="#">Services3</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-list__li"><a class="link" href="#">Careers</a></li>
+                  <li class="menu-list__li"><a class="link" href="#">News</a></li>
+                  <li class="menu-list__li"><a class="link" href="#">Documentation</a></li>
+                </ul>
+              </nav>
+              <button class="btn btn__position btn--color--white btn--size--a">Login</button>
+              <button class="btn btn__position btn--color--gradulated btn--size--c">Register</button>
+            </div>
           </div>
         </div>
       </header>
       <header class="header2 header2__position">
         <div class="wrapper__container">
-          <div class="wrap-flex-sb"><img class="logo" src="../src/img/Logo.png" alt="logo"/>
-            <nav class="header2__menu"> 
+          <div class="wrap-flex-sb"><img class="logotype logotype__position" src="../src/img/Logo.png" alt="logotype"/>
+            <nav class="header__menu"> 
               <ul class="menu-list">
-                <li class="menu-list__li menu-list__li--active"><a class="link" href="#">Home</a></li>
+                <li class="menu-list__li"><a class="link link--active" href="#">Home</a></li>
                 <li class="menu-list__li"><a class="link" href="#">About us</a></li>
-                <li class="menu-list__li"><a class="link" href="#">Services</a></li>
+                <li class="menu-list__li topmenu"><a class="link expand-more" href="#">Services</a>
+                  <ul class="menu-list submenu">	
+                    <li class="menu-list__li services"> <a class="link" href="#">Services1</a></li>
+                    <li class="menu-list__li services"> <a class="link" href="#">Services2</a></li>
+                    <li class="menu-list__li services"> <a class="link" href="#">Services3</a></li>
+                  </ul>
+                </li>
                 <li class="menu-list__li"><a class="link" href="#">Careers</a></li>
                 <li class="menu-list__li"><a class="link" href="#">News</a></li>
                 <li class="menu-list__li"><a class="link" href="#">Documentation</a></li>
-              </ul><a class="header2__registery-link" href="#">Cosmin Negoita</a>
+                <li class="menu-list__li line menu-list__li-last"><a class="link" href="#">Cosmin Negoita</a></li>
+              </ul>
             </nav>
           </div>
         </div>
@@ -48,28 +63,28 @@
         <div class="wrapper__container">
           <div class="wrapper__container-height"> 
             <div class="wrap-flex-sb">
-              <div class="footer__content-logo-text"><img class="logo" src="../src/img/Logo.png" alt="logo"/>
+              <div class="footer__content-logo-text"><img class="logotype" src="../src/img/Logo.png" alt="logotype"/>
                 <p class="monserrat14">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.</p>
               </div>
               <div class="footer__content-navigation">
                 <div class="link-columns">
-                  <div class="wrap-flex-jcc"> 
-                    <ul class="link-columns__left-column">
-                      <li class="title">Navigation</li>
+                  <div class="wrap-flex-sb"> 
+                    <ul class="link-columns__columns link-columns__left-column">
+                      <li class="title title__position">Navigation</li>
                       <li class="link-columns__li-elem"><a class="link" href="#">About us</a></li>
                       <li class="link-columns__li-elem"><a class="link" href="#">News</a></li>
                       <li class="link-columns__li-elem"><a class="link" href="#">Support</a></li>
                       <li class="link-columns__li-elem"><a class="link" href="#">Products</a></li>
                     </ul>
-                    <ul class="link-columns__center-column">
-                      <li class="title">About us</li>
+                    <ul class="link-columns__columns link-columns__center-column">
+                      <li class="title title__position">About us</li>
                       <li class="link-columns__li-elem"><a class="link" href="#">Who we are</a></li>
                       <li class="link-columns__li-elem"><a class="link" href="#">Our team</a></li>
                       <li class="link-columns__li-elem"><a class="link" href="#">Careers</a></li>
                       <li class="link-columns__li-elem"><a class="link" href="#">Investors</a></li>
                     </ul>
-                    <ul class="link-columns__right-column">
-                      <li class="title">Support</li>
+                    <ul class="link-columns__columns link-columns__right-column">
+                      <li class="title title__position">Support</li>
                       <li class="link-columns__li-elem"><a class="link" href="#">Documentation</a></li>
                       <li class="link-columns__li-elem"><a class="link" href="#">Community</a></li>
                       <li class="link-columns__li-elem"><a class="link" href="#">Get in touch</a></li>
@@ -78,11 +93,11 @@
                 </div>
               </div>
               <div class="footer__content-subscribing">
-                <div class="title">Subscribe to our newsletter</div>
+                <div class="title title__position">Subscribe to our newsletter</div>
                 <p class="monserrat14">Receive our latest news and promotions in your inbox!</p>
                 <form class="footer__email-form" method="post">
                   <input class="footer__inputtext" type="email" placeholder="Your name address"/>
-                  <button class="footer__button" type="submit"><i class="material-icons footer__arrow">arrow_forward </i></button>
+                  <button class="footer__button" type="submit"><i class="arrow">arrow_forward </i></button>
                 </form>
               </div>
             </div>
@@ -92,7 +107,9 @@
       <footer class="subfooter subfooter__position">
         <div class="wrapper__container">
           <div class="wrap-flex-sb">
-            <p class="monserrat14 monserrat14--line-height--17">Copyright © 2018 Toxin UI Kit. All rights reserved.</p>
+            <div class="wrap-flex-align-center">
+              <p class="monserrat14 monserrat14--line-height--17">Copyright © 2018 Toxin UI Kit. All rights reserved.</p>
+            </div>
             <ul class="social-icons">
               <li class="social-icons__icons-all"><a class="social-icons__twitter" href="#"></a></li>
               <li class="social-icons__icons-all"><a class="social-icons__facebook" href="#"></a></li>
@@ -102,9 +119,9 @@
         </div>
       </footer>
       <footer class="footer2 footer2__position">
-        <div class="wrapper__container-footer2-height"><img class="logo" src="../src/img/Logo.png" alt="logo"/>
-          <p class="monserrat14">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.</p>
-          <ul class="social-icons">
+        <div class="wrapper__container-height"><img class="logotype" src="../src/img/Logo.png" alt="logotype"/>
+          <p class="monserrat14 footer2__text-position">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.</p>
+          <ul class="social-icons footer2__icons-position">
             <li class="social-icons__icons-all"><a class="social-icons__twitter" href="#"></a></li>
             <li class="social-icons__icons-all"><a class="social-icons__facebook" href="#"></a></li>
             <li class="social-icons__icons-all"><a class="social-icons__instagram" href="#"></a></li>
