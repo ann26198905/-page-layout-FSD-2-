@@ -10,8 +10,235 @@ html(lang="en")
       title Cards
    body
       .wrapper
-         .wrapper__Logo-simbol 
-            img(src="../src/img/Logosimbol.png", alt="Logotype")
-         .block-cards-page
-            .block-cards-page__container
-               include ../src/searching-room-form/searching-room-form.pug
+         img.logo.logo__pos(src="../src/img/Logosimbol.png", alt="Logo")
+         .wrapper__container
+            .wrapper__container-height150
+               .wrap-flex-row
+                  form.form.searching-room.searching-room__pos(method="post")
+                     .form__container
+                        p.title.title__pos Найдем номера под ваши пожелания
+                           //- Хэдер
+                        .wrap-flex-sb
+                           .form-group.form-group__width 
+                              label.label.label__pos Прибытие
+                              input.input.input--size--s(type="date" placeholder="ДД.ММ.ГГГГ" name="startdate" min="01.04.2020" max="31.12.2020")
+                              i.input--expand expand_more
+                           .form-group.form-group__width 
+                              label.label.label__pos Выезд
+                              input.input.input--size--s(type="date" placeholder="ДД.ММ.ГГГГ" name="enddate" min="01.04.2020" max="31.12.2020")
+                              i.input--expand expand_more
+                        label.label.label__pos Гости
+                        input.input.input__guests.input--size--m(type="number" placeholder="Сколько гостей" name="guests" min="1" max="30")
+                        i.input--expand expand_more
+                        //- Хэдэр   
+                        button.btn.btn--color--gradulated.btn--size--d(type="submit") Подобрать номер
+                        i.arrow arrow_forward
+                  form.form.searching-room-result.searching-room-result__pos(method="post")
+                     .form__container
+                        .wrap-flex-sb
+                           .number-room.number-room__pos
+                              span.number-room__roombol № 
+                              span.title.number-room__mumber 888
+                              span.number-room__type-room  люкс
+                           .price-room
+                              span.price-room__price 9 900
+                              span.price-room__currency g
+                              span.price-room__period  в сутки
+                        .wrap-flex-sb
+                           .form-group.form-group__width
+                              label.label.label__pos Прибытие
+                              input.input.input--size--s(type="date" placeholder="19.08.2019" name="startdate" min="01.04.2020" max="31.12.2020")
+                              i.input--expand expand_more
+                           .form-group.form-group__width
+                              label.label.label__pos Выезд
+                              input.input.input--size--s(type="date" placeholder="23.08.2019" name="enddate" min="01.04.2020" max="31.12.2020")
+                              i.input--expand expand_more
+                        label.label.label__pos Гости
+                        input.input.input__guests.input--size--m(type="number" placeholder="3 гостя" name="guests" min="1" max="30")
+                        i.input--expand expand_more
+                        .ordering-result 
+                           -
+                              var Left = [
+                                 {'roomPrice': '9 900'},
+                                 {'amountDay': '4'},
+                                 {'days': ' суток'},
+                                 {'discount': '2 179'},
+                                 {'total': 'Итого '},
+                                 ]
+                                 // todo: switch case
+                           -
+                              var Right = [
+                                 {'totalRoomPrice': '39 960'},
+                                 {'serviceCharge': '0'},
+                                 {'extraService': '300'},
+                                 {'totalPrice': '38 081'},
+                              ]
+                           .wrap-flex-sb     
+                              span.order-result #{Left[0].roomPrice} P x #{Left[1].amountDay}#{Left[2].days}
+                              span.order-result #{Right[0].totalRoomPrice} P
+                           .wrap-flex-sb     
+                              span.order-result Сбор за услуги: скидка #{Left[3].discount}P
+                              span.order-result #{Right[1].serviceCharge} p
+                           .wrap-flex-sb     
+                              span.order-result Сбор за дополнительные услуги 
+                              span.order-result #{Right[2].extraService} p
+                           .wrap-flex-sb     
+                              span.order-result #{Left[4].total}
+                              span.order-result #{Right[3].totalPrice} p
+                        button.btn.btn--color--gradulated.btn--size--d(type="submit") Подобрать номер
+                        i.arrow arrow_forward
+                  form.form.calendar.calendar__pos(method="post")
+                     .calendar__container
+                        .wrap-flex-sb
+                           button.button(type="submit")
+                              i.arrow.arrow--grad arrow_back
+                           span.monthNames Август 2019
+                           button.button(type="submit") 
+                              i.arrow.arrow--grad arrow_forward
+                        table.table.table__pos(border='0')
+                           tr.names-week
+                              th.name-week Пн
+                              th.name-week Вт
+                              th.name-week Ср
+                              th.name-week Чт
+                              th.name-week Пт
+                              th.name-week Сб
+                              th.name-week Вс
+                           tr.dates
+                              td.date.date--nonactive 29
+                              td.date.date--nonactive 30
+                              td.date.date--nonactive 31
+                              td.date 1
+                              td.date 2
+                              td.date 3
+                              td.date 4
+                           tr.dates
+                              td.date 5
+                              td.date 6
+                              td.date 7
+                              td.date.date--current 8
+                              td.date 9
+                              td.date 10
+                              td.date 11
+                           tr.dates
+                              td.date 12
+                              td.date 13
+                              td.date 14
+                              td.date 15
+                              td.date 16
+                              td.date 17
+                              td.date 18
+                           tr.dates
+                              td.date 19
+                              td.date 20
+                              td.date 21
+                              td.date 22
+                              td.date 23
+                              td.date 24
+                              td.date 25
+                           tr.dates
+                              td.date 26
+                              td.date 27
+                              td.date 28
+                              td.date 29
+                              td.date 30
+                              td.date 31
+                              td.date.date--nonactive 1
+                        .wrap-flex-sb
+                           button.button(type="submit") Очистить
+                           button.button(type="submit") Применить
+                  form.form.registery-account.registery-account__pos(method="post")
+                     .form__container
+                        p.title.title__pos Регистрация аккаунта
+                        .form-group
+                           label.label 
+                              input.input.input--size--m(type="text" placeholder="Имя" name="nameman")
+                           label.label 
+                              input.input.input.input--size--m(type="text" placeholder="Фамилия" name="surnameman")
+                        .form-group
+                           .wrap-flex-row
+                              input#sex.input(type="radio" value="man" name="radio")
+                              label(for='sex').label Мужчина
+                              input#sex.input(type="radio" value="woman" name="radio")
+                              label(for='sex').label Женщина
+                        .form-group
+                           label.label Дата рождения
+                              input.input(type="date" placeholder="ДД.ММ.ГГГГ" name="birthday" min="01.01.1900" max="01.01.2002")
+                        .form-group
+                           label.label Данные для входа в сервис
+                              input.input.input.input--size--m(type="email" placeholder="Email" name="email")
+                              input.input.input.input--size--m(type="password" placeholder="Пароль" name="password")
+                        .form-group
+                           input#offers.input(type="radio" value="extraOffer" name="extraOffer")
+                           label(for='offers').label Получать спецпредложения
+                        button.btn.btn--color--gradulated.btn--size--d(type="submit") Перейти к оплате
+                           i.arrow.arrow--white arrow_forward
+                        .wrap-flex-sb
+                           p.montserrat1418 Уже есть аккаунт на Toxin
+                           button.btn.btn--color--white.btn--size--b(type="submit") Войти
+                  form.form.enter.enter__pos(method="post")
+                     .form__container
+                        p.title.title__pos Войти
+                        .form-group
+                           input.input.input.input--size--m(type="email" placeholder="Email" name="email")
+                           input.input.input.input--size--m(type="password" placeholder="Пароль" name="password")
+                        button.btn.btn--color--gradulated.btn--size--d(type="submit") Войти
+                           i.arrow.arrow--white arrow_forward
+                        .wrap-flex-sb
+                           p.montserrat1418 Нет аккаунта на Toxin?
+                           button.btn.btn--color--white.btn--size--b(type="submit") Создать
+                  .search-room-result
+                     .room-slider
+                        ul.room-slider__list
+                           li.room-slider__elem
+                              img(src="../src/search-room-result/img/1lux.png", alt="room-photo")
+                           //- li.room-slider__elem
+                           //-    img(src="../src/search-room-result/img/2.png", alt="room-photo")
+                           //- li.room-slider__elem
+                           //-    img(src="../src/search-room-result/img/1lux.png", alt="room-photo")
+                           //- li.room-slider__elem
+                           //-    img(src="../src/search-room-result/img/2.png", alt="room-photo")
+                        .room-slider-arrow
+                           i.room-slider-arrow_left.expand_more expand_more
+                           i.room-slider-arrow_right.expand_more expand_more
+                        .room-slider-dots
+                     .wrap-flex-sb
+                        .number-room
+                           span.number-room__roombol №
+                           span.number-room__mumber 888
+                           span.number-room__type-room люкс
+                        .price-room
+                           span.price-room__price 9 900
+                           span.price-room__currency g
+                           span.price-room__period в сутки
+                     hr
+                     .wrap-flex-sb
+                        .star-range
+                           span.fa.fa-star.fa-star--checked
+                           span.fa.fa-star.fa-star--checked
+                           span.fa.fa-star.fa-star--checked
+                           span.fa.fa-star.fa-star--checked
+                           span.fa.fa-star.fa-star--checked
+                        .reviews
+                        - var reviewsNum = '145'
+                           span.reviews__rev-num #{reviewsNum} Отзывов
+
+      script(src="../js/jquery-3.5.0.min.js") 
+      script(src="../js/main.js")
+
+
+
+            
+
+            
+
+
+                     
+                     
+
+
+
+
+                     
+                           
+                  

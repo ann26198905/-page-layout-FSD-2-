@@ -236,10 +236,7 @@ margin: 0 auto;
     position: absolute;
     right: 0;
     top: 0;
-    width: 42px;
-    border: none;
-height: 42px;
-background-color: #fff;
+    
   }
 
   .arrow {
@@ -253,6 +250,10 @@ background: linear-gradient(180deg, #bc9cff, #8ba4f9);
     -webkit-text-fill-color: transparent;
   }
 }
+.button {width: 42px;
+  border: none;
+height: 42px;
+background-color: #fff;}
 .monserrat14 {
 font-family: Montserrat;
 font-style: normal;
