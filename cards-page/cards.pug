@@ -16,23 +16,23 @@ html(lang="en")
                .wrap-flex-row
                   form.form.searching-room.searching-room__pos(method="post")
                      .form__container
-                        p.title.title__pos Найдем номера под ваши пожелания
+                        p.title.title__pos Найдём номера под ваши пожелания
                            //- Хэдер
                         .wrap-flex-sb
-                           .form-group.form-group__width 
+                           .form-group.form-group__view 
                               label.label.label__pos Прибытие
                               input.input.input--size--s(type="date" placeholder="ДД.ММ.ГГГГ" name="startdate" min="01.04.2020" max="31.12.2020")
-                              i.input--expand expand_more
-                           .form-group.form-group__width 
+                              i.expand.expand__pos expand_more
+                           .form-group.form-group__view 
                               label.label.label__pos Выезд
                               input.input.input--size--s(type="date" placeholder="ДД.ММ.ГГГГ" name="enddate" min="01.04.2020" max="31.12.2020")
-                              i.input--expand expand_more
+                              i.expand.expand__pos expand_more
                         label.label.label__pos Гости
                         input.input.input__guests.input--size--m(type="number" placeholder="Сколько гостей" name="guests" min="1" max="30")
-                        i.input--expand expand_more
+                        i.expand.expand__pos2 expand_more
                         //- Хэдэр   
-                        button.btn.btn--color--gradulated.btn--size--d(type="submit") Подобрать номер
-                        i.arrow arrow_forward
+                        button.btn.btn--color--grad.btn--size--d(type="submit") Подобрать номер
+                        i.arrow.arrow--white.arrow__pos arrow_forward
                   form.form.searching-room-result.searching-room-result__pos(method="post")
                      .form__container
                         .wrap-flex-sb
@@ -41,25 +41,25 @@ html(lang="en")
                               span.title.number-room__mumber 888
                               span.number-room__type-room  люкс
                            .price-room
-                              span.price-room__price 9 900
-                              span.price-room__currency g
+                              span.price-room__price 9 990
+                              span.currency g
                               span.price-room__period  в сутки
                         .wrap-flex-sb
-                           .form-group.form-group__width
+                           .form-group.form-group__view
                               label.label.label__pos Прибытие
-                              input.input.input--size--s(type="date" placeholder="19.08.2019" name="startdate" min="01.04.2020" max="31.12.2020")
-                              i.input--expand expand_more
-                           .form-group.form-group__width
+                              input.input.input--height--24.input--size--s(type="number" placeholder="19.08.2019" name="startdate" min="01.04.2020" max="31.12.2020")
+                              i.expand.expand__pos expand_more
+                           .form-group.form-group__view
                               label.label.label__pos Выезд
-                              input.input.input--size--s(type="date" placeholder="23.08.2019" name="enddate" min="01.04.2020" max="31.12.2020")
-                              i.input--expand expand_more
+                              input.input.input--height--24.input--size--s(type="number" placeholder="23.08.2019" name="enddate" min="01.04.2020" max="31.12.2020")
+                              i.expand.expand__pos expand_more
                         label.label.label__pos Гости
-                        input.input.input__guests.input--size--m(type="number" placeholder="3 гостя" name="guests" min="1" max="30")
-                        i.input--expand expand_more
-                        .ordering-result 
+                        input.input.input--height--24.input__guests.input--size--m(type="number" placeholder="3 гостя" name="guests" min="1" max="30")
+                        i.expand.expand__pos2 expand_more
+                        .ordering-result.ordering-result__pos
                            -
                               var Left = [
-                                 {'roomPrice': '9 900'},
+                                 {'roomPrice': '9 990'},
                                  {'amountDay': '4'},
                                  {'days': ' суток'},
                                  {'discount': '2 179'},
@@ -72,29 +72,40 @@ html(lang="en")
                                  {'serviceCharge': '0'},
                                  {'extraService': '300'},
                                  {'totalPrice': '38 081'},
+                              
                               ]
                            .wrap-flex-sb     
-                              span.order-result #{Left[0].roomPrice} P x #{Left[1].amountDay}#{Left[2].days}
-                              span.order-result #{Right[0].totalRoomPrice} P
+                              span.order-result #{Left[0].roomPrice}
+                                 span.currency.currency--grey a
+                                 span.order-result  x #{Left[1].amountDay}#{Left[2].days}
+                              span.order-result #{Right[0].totalRoomPrice}
+                                 span.currency.currency--grey a
                            .wrap-flex-sb     
-                              span.order-result Сбор за услуги: скидка #{Left[3].discount}P
-                              span.order-result #{Right[1].serviceCharge} p
+                              span.order-result Сбор за услуги: скидка #{Left[3].discount}
+                                 span.currency.currency--grey a
+                                 img.order-result__info-pos(src="./img/i.png")
+                              span.order-result #{Right[1].serviceCharge}
+                                 span.currency.currency--grey a
                            .wrap-flex-sb     
-                              span.order-result Сбор за дополнительные услуги 
-                              span.order-result #{Right[2].extraService} p
-                           .wrap-flex-sb     
-                              span.order-result #{Left[4].total}
-                              span.order-result #{Right[3].totalPrice} p
-                        button.btn.btn--color--gradulated.btn--size--d(type="submit") Подобрать номер
-                        i.arrow arrow_forward
+                              span.order-result.order-result--extraService-view Сбор за дополнительные услуги
+                                 img.order-result__info-pos.order-result__info-pos--margin(src="./img/i.png") 
+                              span.order-result #{Right[2].extraService}
+                                 span.currency.currency--grey a
+                           .wrap-margin
+                              .wrap-flex-sb     
+                                 span.order-result.order-result--total-view #{Left[4].total}
+                                 span.order-result.order-result--total-view #{Right[3].totalPrice}
+                                    span.currency o 
+                        button.btn.btn--color--grad.btn--size--d(type="submit") Забронировать
+                        i.arrow.arrow--white.arrow__pos  arrow_forward
                   form.form.calendar.calendar__pos(method="post")
                      .calendar__container
                         .wrap-flex-sb
                            button.button(type="submit")
-                              i.arrow.arrow--grad arrow_back
+                              i.arrow.arrow--grad.calendar__arrow-pos arrow_back
                            span.monthNames Август 2019
                            button.button(type="submit") 
-                              i.arrow.arrow--grad arrow_forward
+                              i.arrow.arrow--grad.calendar__arrow-pos arrow_forward
                         table.table.table__pos(border='0')
                            tr.names-week
                               th.name-week Пн
@@ -169,10 +180,10 @@ html(lang="en")
                               input.input.input.input--size--m(type="email" placeholder="Email" name="email")
                               input.input.input.input--size--m(type="password" placeholder="Пароль" name="password")
                         .form-group
-                           input#offers.input(type="radio" value="extraOffer" name="extraOffer")
+                           input#offers.input.input__toggle(type="radio" value="extraOffer" name="extraOffer")
                            label(for='offers').label Получать спецпредложения
-                        button.btn.btn--color--gradulated.btn--size--d(type="submit") Перейти к оплате
-                           i.arrow.arrow--white arrow_forward
+                        button.btn.btn--color--grad.btn--size--d(type="submit") Перейти к оплате
+                        i.arrow.arrow--white.arrow__pos  arrow_forward
                         .wrap-flex-sb
                            p.montserrat1418 Уже есть аккаунт на Toxin
                            button.btn.btn--color--white.btn--size--b(type="submit") Войти
@@ -182,8 +193,8 @@ html(lang="en")
                         .form-group
                            input.input.input.input--size--m(type="email" placeholder="Email" name="email")
                            input.input.input.input--size--m(type="password" placeholder="Пароль" name="password")
-                        button.btn.btn--color--gradulated.btn--size--d(type="submit") Войти
-                           i.arrow.arrow--white arrow_forward
+                        button.btn.btn--color--grad.btn--size--d(type="submit") Войти
+                        i.arrow.arrow--white.arrow__pos  arrow_forward
                         .wrap-flex-sb
                            p.montserrat1418 Нет аккаунта на Toxin?
                            button.btn.btn--color--white.btn--size--b(type="submit") Создать
@@ -199,8 +210,8 @@ html(lang="en")
                            //- li.room-slider__elem
                            //-    img(src="../src/search-room-result/img/2.png", alt="room-photo")
                         .room-slider-arrow
-                           i.room-slider-arrow_left.expand_more expand_more
-                           i.room-slider-arrow_right.expand_more expand_more
+                           i.expand.expand--white.expand--left expand_more
+                           i.expand.expand--white.expand--right expand_more
                         .room-slider-dots
                      .wrap-flex-sb
                         .number-room
@@ -208,17 +219,17 @@ html(lang="en")
                            span.number-room__mumber 888
                            span.number-room__type-room люкс
                         .price-room
-                           span.price-room__price 9 900
-                           span.price-room__currency g
+                           span.price-room__price 9 990
+                           span.currency g
                            span.price-room__period в сутки
                      hr
                      .wrap-flex-sb
                         .star-range
-                           span.fa.fa-star.fa-star--checked
-                           span.fa.fa-star.fa-star--checked
-                           span.fa.fa-star.fa-star--checked
-                           span.fa.fa-star.fa-star--checked
-                           span.fa.fa-star.fa-star--checked
+                           span.star
+                           span.star
+                           span.star
+                           span.star
+                           span.star
                         .reviews
                         - var reviewsNum = '145'
                            span.reviews__rev-num #{reviewsNum} Отзывов
