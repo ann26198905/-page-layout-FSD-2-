@@ -3,9 +3,14 @@ html(lang="en")
    head
       meta(charset="UTF-8")
       meta(name="viewport" content="width=device-width,       initial-scale=1.0")
+      link(href="../src/air-datepicker-master/dist/css/datepicker.min.css" rel="stylesheet" type="text/css")
       link(rel="stylesheet" href="./styles.cards.css")
       link(rel="stylesheet" href="../src/fonts/iconfont/material-icons.css")
       link(rel="stylesheet" href="../src/fonts/awesomefont/awesome/all.min.css")
+      
+      script(src="../js/jquery-3.5.0.min.js") 
+      script(src="../src/air-datepicker-master/dist/js/datepicker.min.js")
+      script(src="../js/main.js")
 
       title Cards
    body
@@ -37,7 +42,7 @@ html(lang="en")
                      .form__container
                         .wrap-flex-sb
                            .number-room.number-room__pos
-                              span.number-room__roombol № 
+                              span.title.number-room__roombol № 
                               span.title.number-room__mumber 888
                               span.number-room__type-room  люкс
                            .price-room
@@ -63,7 +68,7 @@ html(lang="en")
                                  {'amountDay': '4'},
                                  {'days': ' суток'},
                                  {'discount': '2 179'},
-                                 {'total': 'Итого '},
+                                 {'total': 'Итого'},
                                  ]
                                  // todo: switch case
                            -
@@ -94,11 +99,13 @@ html(lang="en")
                            .wrap-margin
                               .wrap-flex-sb     
                                  span.order-result.order-result--total-view #{Left[4].total}
+                                 .order-result__dots
                                  span.order-result.order-result--total-view #{Right[3].totalPrice}
                                     span.currency o 
                         button.btn.btn--color--grad.btn--size--d(type="submit") Забронировать
                         i.arrow.arrow--white.arrow__pos  arrow_forward
-                  form.form.calendar.calendar__pos(method="post")
+                  .datepicker-here(data-range="true")
+                  //- form.form.calendar.calendar__pos(method="post")
                      .calendar__container
                         .wrap-flex-sb
                            button.button(type="submit")
@@ -106,72 +113,70 @@ html(lang="en")
                            span.monthNames Август 2019
                            button.button(type="submit") 
                               i.arrow.arrow--grad.calendar__arrow-pos arrow_forward
-                        table.table.table__pos(border='0')
-                           tr.names-week
-                              th.name-week Пн
-                              th.name-week Вт
-                              th.name-week Ср
-                              th.name-week Чт
-                              th.name-week Пт
-                              th.name-week Сб
-                              th.name-week Вс
-                           tr.dates
-                              td.date.date--nonactive 29
-                              td.date.date--nonactive 30
-                              td.date.date--nonactive 31
-                              td.date 1
-                              td.date 2
-                              td.date 3
-                              td.date 4
-                           tr.dates
-                              td.date 5
-                              td.date 6
-                              td.date 7
-                              td.date.date--current 8
-                              td.date 9
-                              td.date 10
-                              td.date 11
-                           tr.dates
-                              td.date 12
-                              td.date 13
-                              td.date 14
-                              td.date 15
-                              td.date 16
-                              td.date 17
-                              td.date 18
-                           tr.dates
-                              td.date 19
-                              td.date 20
-                              td.date 21
-                              td.date 22
-                              td.date 23
-                              td.date 24
-                              td.date 25
-                           tr.dates
-                              td.date 26
-                              td.date 27
-                              td.date 28
-                              td.date 29
-                              td.date 30
-                              td.date 31
-                              td.date.date--nonactive 1
+                        table.table.table__pos(border='0' width='100%')
+                           tr.table__names-week
+                              th.table__name Пн
+                              th.table__name Вт
+                              th.table__name Ср
+                              th.table__name Чт
+                              th.table__name Пт
+                              th.table__name Сб
+                              th.table__name Вс
+                           tr.table__dates
+                              td.table__date.table__date--nonactive 29
+                              td.table__date.table__date--nonactive 30
+                              td.table__date.table__date--nonactive 31
+                              td.table__date 1
+                              td.table__date 2
+                              td.table__date 3
+                              td.table__date 4
+                           tr.table__dates
+                              td.table__date 5
+                              td.table__date 6
+                              td.table__date 7
+                              td.table__date.table__date--current 8
+                              td.table__date 9
+                              td.table__date 10
+                              td.table__date 11
+                           tr.table__dates
+                              td.table__date 12
+                              td.table__date 13
+                              td.table__date 14
+                              td.table__date 15
+                              td.table__date 16
+                              td.table__date 17
+                              td.table__date 18
+                           tr.table__dates
+                              td.table__date 19
+                              td.table__date 20
+                              td.table__date 21
+                              td.table__date 22
+                              td.table__date 23
+                              td.table__date 24
+                              td.table__date 25
+                           tr.table__dates
+                              td.table__date 26
+                              td.table__date 27
+                              td.table__date 28
+                              td.table__date 29
+                              td.table__date 30
+                              td.table__date 31
+                              td.table__date.table__date--nonactive 1
                         .wrap-flex-sb
-                           button.button(type="submit") Очистить
-                           button.button(type="submit") Применить
+                           button.btn.button.btn__del(type="submit") Очистить
+                           button.btn.btn--color--white.button(type="submit") Применить
                   form.form.registery-account.registery-account__pos(method="post")
                      .form__container
                         p.title.title__pos Регистрация аккаунта
                         .form-group
-                           label.label 
-                              input.input.input--size--m(type="text" placeholder="Имя" name="nameman")
-                           label.label 
-                              input.input.input.input--size--m(type="text" placeholder="Фамилия" name="surnameman")
+                           input.input.input__guests.input--size--m(type="text" placeholder="Имя" name="nameman")
+                           input.input.input__guests.input--size--m(type="text" placeholder="Фамилия" name="surnameman")
                         .form-group
                            .wrap-flex-row
-                              input#sex.input(type="radio" value="man" name="radio")
-                              label(for='sex').label Мужчина
-                              input#sex.input(type="radio" value="woman" name="radio")
-                              label(for='sex').label Женщина
+                              input#sex1.input(type="radio" value="man" name="radio")
+                              label(for='sex1').label Мужчина
+                              input#sex2.input(type="radio" value="woman" name="radio")
+                              label(for='sex2').label Женщина
                         .form-group
                            label.label Дата рождения
                               input.input(type="date" placeholder="ДД.ММ.ГГГГ" name="birthday" min="01.01.1900" max="01.01.2002")
@@ -215,13 +220,13 @@ html(lang="en")
                         .room-slider-dots
                      .wrap-flex-sb
                         .number-room
-                           span.number-room__roombol №
-                           span.number-room__mumber 888
+                           span.title.number-room__roombol № 
+                           span.title.number-room__mumber 888 
                            span.number-room__type-room люкс
                         .price-room
                            span.price-room__price 9 990
                            span.currency g
-                           span.price-room__period в сутки
+                           span.price-room__period  в сутки
                      hr
                      .wrap-flex-sb
                         .star-range
@@ -234,8 +239,7 @@ html(lang="en")
                         - var reviewsNum = '145'
                            span.reviews__rev-num #{reviewsNum} Отзывов
 
-      script(src="../js/jquery-3.5.0.min.js") 
-      script(src="../js/main.js")
+
 
 
 
