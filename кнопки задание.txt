@@ -1,0 +1,9 @@
+button
+99х44 град и бел  - size-b
+320х44 град - size-d
+79х34 бел - size-a
+101х34 град - size-c
+
+input
+150x44 - size s
+320x44 - size m

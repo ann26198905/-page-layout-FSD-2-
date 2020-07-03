@@ -153,7 +153,7 @@ body {
 //   line-height: 15px;
   position: relative;
   &__del {
-    margin: 0 -7px 0 -7px;
+    // margin: 0 -7px 0 -7px;
     color: rgba(31, 32, 65, 0.5);
   }
 }
@@ -417,7 +417,18 @@ color: #fff;
         border-radius: 50%;
     }
   }
-
+  .wrap {position: relative;
+  &__datepicker-buttons {
+    width: 320px;
+  height: 20px;
+position: absolute;
+top: 334px;}
+    &__container {
+      margin: 0 auto;
+      width: 290px;
+    }
+  }
+  
   .registery-account {
     width: 380px;
     height: 646px;

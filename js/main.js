@@ -1,4 +1,5 @@
-jQuery(function () {
+$(document).ready(
+    function() {
     
     // $.datepicker.regional['ru'] = {
     //     closeText: 'Закрыть',
@@ -19,5 +20,16 @@ jQuery(function () {
     // };
     // $.datepicker.setDefaults($.datepicker.regional['ru']);
    
-
+    // $(".datepicker--nav-title").text(function delComma() {
+    // if $(".datepicker--nav-title").contains
+    // });
+    //     console.log( delComma())
+    $('.datepicker-here').datepicker({
+    navTitles: {
+        days: "MM <i>yyyy</i>",
+        months: "yyyy",
+        years: "yyyy1 - yyyy2"
+        }
+    });
+   
 });
